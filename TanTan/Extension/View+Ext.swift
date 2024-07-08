@@ -7,12 +7,9 @@
 
 import SwiftUI
 
-struct View_Ext: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+extension View {
+    func colorButton(type:ButtonType) -> some View {
+        self.modifier(ColorButton(type: type))
     }
-}
-
-#Preview {
-    View_Ext()
+    
 }

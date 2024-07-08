@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+     
     private var appState = AppState()
     
     var body: some View {
