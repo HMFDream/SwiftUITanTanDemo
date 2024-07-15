@@ -17,6 +17,7 @@ struct ContentView: View {
             switch appState.selectedTab {
             case .home:
                 HomeScreen()
+                    .environment(appState)
             case .live:
                 Text("home")
             case .message:

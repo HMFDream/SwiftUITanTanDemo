@@ -8,6 +8,7 @@
 import Foundation
 
 @Observable class HomeViewModel {
+    var selectedTitle:HomeScreen.HomeTitle = .TANTAN
     var displayingCard: [UserCard]
     init() {
         displayingCard = [

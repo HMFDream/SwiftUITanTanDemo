@@ -9,7 +9,8 @@ import SwiftUI
 
 struct UserCardView: View {
     var userCard:UserCard
-    var swipeAction:(() -> Void)
+    var swipeAction:(() -> Void)?
+    @Environment(AppState.self) var appState
     @State var imageIndex = 0
     @State var offset:CGSize = .zero
     var body: some View {
@@ -20,7 +21,7 @@ struct UserCardView: View {
                 Image(userCard.photos[imageIndex])
                     .resizable()
                     .frame(width: frameWidth,height: frameHeight)
-                    .cornerRadius(20)
+                    .cornerRadius(appState.isFullScreen ? 0 : 20)
                 HStack {
                     Rectangle().onTapGesture {
                         frontImage()
@@ -32,7 +33,7 @@ struct UserCardView: View {
                 .foregroundColor(.white.opacity(0.01))
                 HStack {
                     ForEach(0 ..< userCard.photos.count, id:\.self ) { i in
-                        RoundedRectangle(cornerRadius: 20)
+                        RoundedRectangle(cornerRadius:  20)
                             .frame(height: 4)
                             .foregroundColor(imageIndex == i ? .white : .gray.opacity(0.5))
                     }
@@ -52,7 +53,9 @@ struct UserCardView: View {
                     .padding(.top, 40)
                     .padding(.horizontal, 30)
                     Spacer()
-                    createUserCardBottomInfo()
+                    if !appState.isFullScreen {
+                        createUserCardBottomInfo()
+                    }
                 }
             }
             .offset(offset)
@@ -61,18 +64,21 @@ struct UserCardView: View {
             .gesture(
                 DragGesture()
                     .onChanged({ value in
+                        guard !appState.isFullScreen else {return}
                         withAnimation(.easeInOut(duration: 0.2)) {
                             offset = value.translation
                         }
-                        
                     })
                     .onEnded({ value in
+                        guard !appState.isFullScreen else {return}
                         withAnimation(.easeInOut(duration: 0.2)) {
                             let screenCutoff = frameWidth / 2 * 0.8
                             let trans = abs(value.translation.width)
                             if trans > screenCutoff {
                                 offset = CGSize(width: frameWidth, height: frameHeight)
-                                swipeAction()
+                                if (swipeAction != nil) {
+                                    swipeAction!()
+                                }
                             } else {
                                 offset = .zero
                             }
@@ -127,7 +133,7 @@ struct UserCardView: View {
             }
             Spacer()
             Button(action: {
-                
+                appState.isFullScreen = true
             }, label: {
                 Image(systemName: "info.circle.fill")
                     .font(.system(size: 30))
@@ -140,7 +146,7 @@ struct UserCardView: View {
         .background(
             LinearGradient(colors: [.black.opacity(0.9),.clear], startPoint: .bottom, endPoint: .top)
         )
-        .cornerRadius(20)
+        .cornerRadius(appState.isFullScreen ? 0 : 20)
         .clipped()
     }
     
@@ -159,4 +165,5 @@ struct UserCardView: View {
     UserCardView(userCard: UserCard(name: "name", age: 23, place: "place", zodiac: "zodiac", photos: ["User1","User2"])) {
         //
     }
+    .environment(AppState())
 }

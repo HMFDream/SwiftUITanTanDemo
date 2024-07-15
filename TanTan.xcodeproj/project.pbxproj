@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		92A40DC02C3BE98E00C28116 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DBD2C3BE98E00C28116 /* HomeScreen.swift */; };
 		92A40DC12C3BE98E00C28116 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DBE2C3BE98E00C28116 /* HomeViewModel.swift */; };
+		92A40DC32C3BEAD000C28116 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DC22C3BEAD000C28116 /* CardDetailView.swift */; };
 		92C06B482C3AB9A300CEE4FC /* TanTanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C06B472C3AB9A300CEE4FC /* TanTanApp.swift */; };
 		92C06B4A2C3AB9A300CEE4FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C06B492C3AB9A300CEE4FC /* ContentView.swift */; };
 		92C06B4C2C3AB9A400CEE4FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C06B4B2C3AB9A400CEE4FC /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		92A40DBD2C3BE98E00C28116 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		92A40DBE2C3BE98E00C28116 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		92A40DC22C3BEAD000C28116 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		92C06B442C3AB9A300CEE4FC /* TanTan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TanTan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C06B472C3AB9A300CEE4FC /* TanTanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanTanApp.swift; sourceTree = "<group>"; };
 		92C06B492C3AB9A300CEE4FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				92C06B642C3ADC3E00CEE4FC /* RoundButton.swift */,
 				92C06B692C3BE14D00CEE4FC /* CardContainerView.swift */,
 				92C06B6B2C3BE78600CEE4FC /* NoResultView.swift */,
+				92A40DC22C3BEAD000C28116 /* CardDetailView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				92C06B652C3ADC3E00CEE4FC /* RoundButton.swift in Sources */,
 				92C06B632C3AC72900CEE4FC /* UserCardView.swift in Sources */,
 				92C06B6A2C3BE14D00CEE4FC /* CardContainerView.swift in Sources */,
+				92A40DC32C3BEAD000C28116 /* CardDetailView.swift in Sources */,
 				92C06B682C3BDDEE00CEE4FC /* View+Ext.swift in Sources */,
 				92C06B562C3ABC3600CEE4FC /* AppState.swift in Sources */,
 				92C06B6C2C3BE78600CEE4FC /* NoResultView.swift in Sources */,

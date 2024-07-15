@@ -45,6 +45,8 @@ struct PressScaleButton : ButtonStyle {
 
 
 struct ColorButton:ViewModifier {
+    @Environment(AppState.self) var appState
+    
     var type:ButtonType
     func body(content: Content) -> some View {
         switch type {
@@ -54,14 +56,14 @@ struct ColorButton:ViewModifier {
         case .no:
             content.foregroundStyle(.white)
                 .padding(.horizontal,30)
-                .background(.gray.opacity(0.5))
+                .background(appState.isFullScreen ? .yellow : .gray.opacity(0.5))
         case .heart:
-            content.foregroundStyle(.pink)
+            content.foregroundStyle(appState.isFullScreen ? .white : .pink)
                 .padding(.horizontal,30)
-                .background(.gray.opacity(0.5))
+                .background(appState.isFullScreen ? .pink :.gray.opacity(0.5))
         case .star:
-            content.foregroundStyle(.blue)
-                .background(.gray.opacity(0.5))
+            content.foregroundStyle(appState.isFullScreen ? .white : .blue)
+                .background(appState.isFullScreen ? .blue :.gray.opacity(0.5))
         }
     }
 }
@@ -76,6 +78,7 @@ struct ColorButton:ViewModifier {
                 .frame(height: 60)
         }
     }.background(Color.accentColor)
+        .environment(AppState(isFullScreen: true))
     
     
 }
