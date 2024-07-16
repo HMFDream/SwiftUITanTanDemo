@@ -27,6 +27,7 @@ struct ChatView: View {
                         VStack {
                             ForEach(chatManager.messages) { messgae in
                                 MessageView(message: messgae)
+                                    .id(messgae.id) // 需要自己指定下！！！
                             }
                         }
                         .onAppear(perform: {
