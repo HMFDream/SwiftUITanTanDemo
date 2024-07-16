@@ -21,7 +21,7 @@ struct ContentView: View {
             case .live:
                 Text("home")
             case .message:
-                Text("home")
+                ChatView(user: User.Others)
             case .profile:
                 Text("home")
             }

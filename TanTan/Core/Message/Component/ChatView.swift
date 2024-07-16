@@ -11,7 +11,7 @@ struct ChatView: View {
     private var chatManager:ChatManager
     
     @State private var typeMessage:String = ""
-    
+    @State var scrollProxy:ScrollViewProxy? = nil
     var user:User
     init(user: User) {
         self.chatManager = ChatManager(user: user)
@@ -23,10 +23,15 @@ struct ChatView: View {
             VStack {
                 Spacer(minLength: 80)
                 ScrollView(.vertical) {
-                    LazyVStack {
-                        ForEach(chatManager.messages.indices, id:\.self) { index in
-                            MessageView(message: chatManager.messages[index])
+                    ScrollViewReader {proxy in
+                        VStack {
+                            ForEach(chatManager.messages) { messgae in
+                                MessageView(message: messgae)
+                            }
                         }
+                        .onAppear(perform: {
+                            scrollProxy = proxy
+                        })
                     }
                 }.scrollIndicators(.hidden)
                 ZStack(alignment: .trailing) {
@@ -52,16 +57,25 @@ struct ChatView: View {
                 .padding(.horizontal)
                 .padding(.bottom)
             }
-            
-            ChatViewHeader(name: user.name, photo: user.photo) {
-                
-            }
+            ChatViewHeader(name: user.name, photo: user.photo) {}
+        }
+        .onChange(of: chatManager.messages.count) {
+            scrollToBottom()
+        }
+        .onChange(of: chatManager.keyboardIsShowing) { oldValue, newValue in
+            scrollToBottom()
         }
     }
     
     func sendMessage() {
         chatManager.sendMessage(Message(content: typeMessage))
         typeMessage = ""
+    }
+    
+    func scrollToBottom() {
+        withAnimation {
+            scrollProxy?.scrollTo(chatManager.messages.last?.id,anchor: .bottom)
+        }
     }
 }
 
