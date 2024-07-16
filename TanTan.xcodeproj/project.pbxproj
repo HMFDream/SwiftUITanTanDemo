@@ -13,6 +13,10 @@
 		929197482C46A307006F7A70 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197472C46A307006F7A70 /* Message.swift */; };
 		9291974B2C46A4CF006F7A70 /* MessageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291974A2C46A4CF006F7A70 /* MessageScreen.swift */; };
 		9291974E2C46A4E0006F7A70 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291974D2C46A4E0006F7A70 /* MessageView.swift */; };
+		929197502C46A5D0006F7A70 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291974F2C46A5D0006F7A70 /* ChatView.swift */; };
+		929197522C46A5E1006F7A70 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197512C46A5E1006F7A70 /* ChatManager.swift */; };
+		929197542C46B030006F7A70 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197532C46B030006F7A70 /* ChatViewHeader.swift */; };
+		929197562C46B050006F7A70 /* CircleAvator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197552C46B050006F7A70 /* CircleAvator.swift */; };
 		92A40DC02C3BE98E00C28116 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DBD2C3BE98E00C28116 /* HomeScreen.swift */; };
 		92A40DC12C3BE98E00C28116 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DBE2C3BE98E00C28116 /* HomeViewModel.swift */; };
 		92A40DC32C3BEAD000C28116 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DC22C3BEAD000C28116 /* CardDetailView.swift */; };
@@ -36,6 +40,10 @@
 		929197472C46A307006F7A70 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9291974A2C46A4CF006F7A70 /* MessageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageScreen.swift; sourceTree = "<group>"; };
 		9291974D2C46A4E0006F7A70 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		9291974F2C46A5D0006F7A70 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		929197512C46A5E1006F7A70 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		929197532C46B030006F7A70 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
+		929197552C46B050006F7A70 /* CircleAvator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvator.swift; sourceTree = "<group>"; };
 		92A40DBD2C3BE98E00C28116 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		92A40DBE2C3BE98E00C28116 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		92A40DC22C3BEAD000C28116 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
@@ -69,6 +77,7 @@
 			children = (
 				9291974C2C46A4D2006F7A70 /* Component */,
 				9291974A2C46A4CF006F7A70 /* MessageScreen.swift */,
+				929197512C46A5E1006F7A70 /* ChatManager.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -77,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				9291974D2C46A4E0006F7A70 /* MessageView.swift */,
+				9291974F2C46A5D0006F7A70 /* ChatView.swift */,
+				929197532C46B030006F7A70 /* ChatViewHeader.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -158,6 +169,7 @@
 				92A40DC22C3BEAD000C28116 /* CardDetailView.swift */,
 				929197412C4519D6006F7A70 /* PickView.swift */,
 				929197432C469EDF006F7A70 /* PickListView.swift */,
+				929197552C46B050006F7A70 /* CircleAvator.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -249,12 +261,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929197502C46A5D0006F7A70 /* ChatView.swift in Sources */,
 				92C06B652C3ADC3E00CEE4FC /* RoundButton.swift in Sources */,
 				92C06B632C3AC72900CEE4FC /* UserCardView.swift in Sources */,
 				929197422C4519D6006F7A70 /* PickView.swift in Sources */,
 				92C06B6A2C3BE14D00CEE4FC /* CardContainerView.swift in Sources */,
 				92A40DC32C3BEAD000C28116 /* CardDetailView.swift in Sources */,
 				92C06B682C3BDDEE00CEE4FC /* View+Ext.swift in Sources */,
+				929197542C46B030006F7A70 /* ChatViewHeader.swift in Sources */,
 				92C06B562C3ABC3600CEE4FC /* AppState.swift in Sources */,
 				929197442C469EDF006F7A70 /* PickListView.swift in Sources */,
 				929197462C46A2CC006F7A70 /* User.swift in Sources */,
@@ -263,9 +277,11 @@
 				92A40DC12C3BE98E00C28116 /* HomeViewModel.swift in Sources */,
 				9291974E2C46A4E0006F7A70 /* MessageView.swift in Sources */,
 				92A40DC02C3BE98E00C28116 /* HomeScreen.swift in Sources */,
+				929197522C46A5E1006F7A70 /* ChatManager.swift in Sources */,
 				92C06B4A2C3AB9A300CEE4FC /* ContentView.swift in Sources */,
 				929197482C46A307006F7A70 /* Message.swift in Sources */,
 				92C06B582C3AC2EB00CEE4FC /* UserCard.swift in Sources */,
+				929197562C46B050006F7A70 /* CircleAvator.swift in Sources */,
 				92C06B482C3AB9A300CEE4FC /* TanTanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
