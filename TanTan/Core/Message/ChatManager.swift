@@ -24,7 +24,7 @@ import UIKit
     }
     
     func loadMessages() {
-        messages = [Message.messageSent, Message.messageReceived]
+        messages = [Message(content: "1"), Message(content: "2", user: User.Others), Message(content: "3"), Message(content: "4", user: User.Others), Message(content: "5"), Message(content: "6", user: User.Others), Message(content: "7"), Message(content: "8", user: User.Others), Message(content: "9"), Message(content: "10", user: User.Others)]
     }
     
     func sendMessage(_ message:Message) {

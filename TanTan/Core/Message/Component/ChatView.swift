@@ -10,7 +10,7 @@ import SwiftUI
 struct ChatView: View {
     private var chatManager:ChatManager
     
-    @State private var typeMessage:String = ""
+    @State private var typingMessage:String = ""
     @State var scrollProxy:ScrollViewProxy? = nil
     var user:User
     init(user: User) {
@@ -33,10 +33,11 @@ struct ChatView: View {
                             scrollProxy = proxy
                         })
                     }
-                }.scrollIndicators(.hidden)
+                }
+                .scrollIndicators(.hidden)
                 ZStack(alignment: .trailing) {
                     Color.gray.opacity(0.1)
-                    TextField("Type a message", text: $typeMessage)
+                    TextField("Type a message", text: $typingMessage)
                         .foregroundStyle(.gray)
                         .textFieldStyle(PlainTextFieldStyle())
                         .padding(.horizontal)
@@ -47,7 +48,7 @@ struct ChatView: View {
                         Text("Send")
                     })
                     .padding(.horizontal)
-                    .foregroundColor(typeMessage.isEmpty ? .gray : .accent)
+                    .foregroundColor(typingMessage.isEmpty ? .gray : .accent)
                 }
                 .frame(height: 45)
                 .cornerRadius(20)
@@ -62,14 +63,14 @@ struct ChatView: View {
         .onChange(of: chatManager.messages.count) {
             scrollToBottom()
         }
-        .onChange(of: chatManager.keyboardIsShowing) { oldValue, newValue in
+        .onChange(of: chatManager.messages.count, perform: { _ in
             scrollToBottom()
-        }
+        })
     }
     
     func sendMessage() {
-        chatManager.sendMessage(Message(content: typeMessage))
-        typeMessage = ""
+        chatManager.sendMessage(Message(content: typingMessage))
+        typingMessage = ""
     }
     
     func scrollToBottom() {
