@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		929197422C4519D6006F7A70 /* PickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197412C4519D6006F7A70 /* PickView.swift */; };
 		929197442C469EDF006F7A70 /* PickListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197432C469EDF006F7A70 /* PickListView.swift */; };
+		929197462C46A2CC006F7A70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197452C46A2CC006F7A70 /* User.swift */; };
+		929197482C46A307006F7A70 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197472C46A307006F7A70 /* Message.swift */; };
+		9291974B2C46A4CF006F7A70 /* MessageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291974A2C46A4CF006F7A70 /* MessageScreen.swift */; };
+		9291974E2C46A4E0006F7A70 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291974D2C46A4E0006F7A70 /* MessageView.swift */; };
 		92A40DC02C3BE98E00C28116 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DBD2C3BE98E00C28116 /* HomeScreen.swift */; };
 		92A40DC12C3BE98E00C28116 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DBE2C3BE98E00C28116 /* HomeViewModel.swift */; };
 		92A40DC32C3BEAD000C28116 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DC22C3BEAD000C28116 /* CardDetailView.swift */; };
@@ -28,6 +32,10 @@
 /* Begin PBXFileReference section */
 		929197412C4519D6006F7A70 /* PickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickView.swift; sourceTree = "<group>"; };
 		929197432C469EDF006F7A70 /* PickListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickListView.swift; sourceTree = "<group>"; };
+		929197452C46A2CC006F7A70 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		929197472C46A307006F7A70 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9291974A2C46A4CF006F7A70 /* MessageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageScreen.swift; sourceTree = "<group>"; };
+		9291974D2C46A4E0006F7A70 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		92A40DBD2C3BE98E00C28116 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		92A40DBE2C3BE98E00C28116 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		92A40DC22C3BEAD000C28116 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
@@ -56,6 +64,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		929197492C46A4BF006F7A70 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				9291974C2C46A4D2006F7A70 /* Component */,
+				9291974A2C46A4CF006F7A70 /* MessageScreen.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		9291974C2C46A4D2006F7A70 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				9291974D2C46A4E0006F7A70 /* MessageView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		92A40DBF2C3BE98E00C28116 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				92C06B572C3AC2EB00CEE4FC /* UserCard.swift */,
+				929197452C46A2CC006F7A70 /* User.swift */,
+				929197472C46A307006F7A70 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +173,7 @@
 		92C06B6D2C3BE96F00CEE4FC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				929197492C46A4BF006F7A70 /* Message */,
 				92A40DBF2C3BE98E00C28116 /* Home */,
 			);
 			path = Core;
@@ -229,10 +257,14 @@
 				92C06B682C3BDDEE00CEE4FC /* View+Ext.swift in Sources */,
 				92C06B562C3ABC3600CEE4FC /* AppState.swift in Sources */,
 				929197442C469EDF006F7A70 /* PickListView.swift in Sources */,
+				929197462C46A2CC006F7A70 /* User.swift in Sources */,
+				9291974B2C46A4CF006F7A70 /* MessageScreen.swift in Sources */,
 				92C06B6C2C3BE78600CEE4FC /* NoResultView.swift in Sources */,
 				92A40DC12C3BE98E00C28116 /* HomeViewModel.swift in Sources */,
+				9291974E2C46A4E0006F7A70 /* MessageView.swift in Sources */,
 				92A40DC02C3BE98E00C28116 /* HomeScreen.swift in Sources */,
 				92C06B4A2C3AB9A300CEE4FC /* ContentView.swift in Sources */,
+				929197482C46A307006F7A70 /* Message.swift in Sources */,
 				92C06B582C3AC2EB00CEE4FC /* UserCard.swift in Sources */,
 				92C06B482C3AB9A300CEE4FC /* TanTanApp.swift in Sources */,
 			);
