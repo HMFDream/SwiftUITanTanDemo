@@ -20,5 +20,9 @@ import Foundation
         messages = [Message.messageSent, Message.messageReceived]
     }
     
+    func sendMessage(_ message:Message) {
+        messages.append(message)
+    }
+    
     
 }
