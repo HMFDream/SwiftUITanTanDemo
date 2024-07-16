@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		929197422C4519D6006F7A70 /* PickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197412C4519D6006F7A70 /* PickView.swift */; };
 		92A40DC02C3BE98E00C28116 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DBD2C3BE98E00C28116 /* HomeScreen.swift */; };
 		92A40DC12C3BE98E00C28116 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DBE2C3BE98E00C28116 /* HomeViewModel.swift */; };
 		92A40DC32C3BEAD000C28116 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A40DC22C3BEAD000C28116 /* CardDetailView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		929197412C4519D6006F7A70 /* PickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickView.swift; sourceTree = "<group>"; };
 		92A40DBD2C3BE98E00C28116 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		92A40DBE2C3BE98E00C28116 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		92A40DC22C3BEAD000C28116 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				92C06B692C3BE14D00CEE4FC /* CardContainerView.swift */,
 				92C06B6B2C3BE78600CEE4FC /* NoResultView.swift */,
 				92A40DC22C3BEAD000C28116 /* CardDetailView.swift */,
+				929197412C4519D6006F7A70 /* PickView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				92C06B652C3ADC3E00CEE4FC /* RoundButton.swift in Sources */,
 				92C06B632C3AC72900CEE4FC /* UserCardView.swift in Sources */,
+				929197422C4519D6006F7A70 /* PickView.swift in Sources */,
 				92C06B6A2C3BE14D00CEE4FC /* CardContainerView.swift in Sources */,
 				92A40DC32C3BEAD000C28116 /* CardDetailView.swift in Sources */,
 				92C06B682C3BDDEE00CEE4FC /* View+Ext.swift in Sources */,
