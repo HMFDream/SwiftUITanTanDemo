@@ -22,4 +22,8 @@ extension View {
         self.modifier(ColorButton(type: type))
     }
     
+    
+    func endEditing(_ force:Bool) {
+        UIApplication.shared.windows.forEach { $0.endEditing(force) }
+    }
 }
