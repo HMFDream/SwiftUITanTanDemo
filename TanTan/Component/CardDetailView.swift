@@ -38,7 +38,7 @@ struct CardDetailView: View {
                         .padding([.horizontal,.top],20)
                         
                         Button(action: {
-                            appState.isFullScreen = false
+                            appState.isTabBarHidden = false
                         }, label: {
                             Image(systemName: "arrow.up.circle.fill")
                                 .font(.system(size: 40))

@@ -56,14 +56,14 @@ struct ColorButton:ViewModifier {
         case .no:
             content.foregroundStyle(.white)
                 .padding(.horizontal,30)
-                .background(appState.isFullScreen ? .yellow : .gray.opacity(0.5))
+                .background(appState.isTabBarHidden ? .yellow : .gray.opacity(0.5))
         case .heart:
-            content.foregroundStyle(appState.isFullScreen ? .white : .pink)
+            content.foregroundStyle(appState.isTabBarHidden ? .white : .pink)
                 .padding(.horizontal,30)
-                .background(appState.isFullScreen ? .pink :.gray.opacity(0.5))
+                .background(appState.isTabBarHidden ? .pink :.gray.opacity(0.5))
         case .star:
-            content.foregroundStyle(appState.isFullScreen ? .white : .blue)
-                .background(appState.isFullScreen ? .blue :.gray.opacity(0.5))
+            content.foregroundStyle(appState.isTabBarHidden ? .white : .blue)
+                .background(appState.isTabBarHidden ? .blue :.gray.opacity(0.5))
         }
     }
 }

@@ -15,7 +15,7 @@ struct HomeScreen: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            if !appState.isFullScreen {
+            if !appState.isTabBarHidden {
                 HStack {
                     HomeTitleButton(selectedTitle: $viewModel.selectedTitle, title: .TANTAN)
                     HomeTitleButton(selectedTitle: $viewModel.selectedTitle, title: .PICKS)
@@ -30,7 +30,7 @@ struct HomeScreen: View {
     @ViewBuilder
     func switchTab() -> some View {
         switch viewModel.selectedTitle {
-        case .TANTAN:
+        case .TANTAN: 
             if viewModel.displayingCard.isEmpty {
                 NoResultView()
             } else {

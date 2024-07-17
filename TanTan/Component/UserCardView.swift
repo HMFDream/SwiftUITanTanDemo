@@ -21,7 +21,7 @@ struct UserCardView: View {
                 Image(userCard.photos[imageIndex])
                     .resizable()
                     .frame(width: frameWidth,height: frameHeight)
-                    .cornerRadius(appState.isFullScreen ? 0 : 20)
+                    .cornerRadius(appState.isTabBarHidden ? 0 : 20)
                 HStack {
                     Rectangle().onTapGesture {
                         frontImage()
@@ -53,7 +53,7 @@ struct UserCardView: View {
                     .padding(.top, 40)
                     .padding(.horizontal, 30)
                     Spacer()
-                    if !appState.isFullScreen {
+                    if !appState.isTabBarHidden {
                         createUserCardBottomInfo()
                     }
                 }
@@ -64,13 +64,13 @@ struct UserCardView: View {
             .gesture(
                 DragGesture()
                     .onChanged({ value in
-                        guard !appState.isFullScreen else {return}
+                        guard !appState.isTabBarHidden else {return}
                         withAnimation(.easeInOut(duration: 0.2)) {
                             offset = value.translation
                         }
                     })
                     .onEnded({ value in
-                        guard !appState.isFullScreen else {return}
+                        guard !appState.isTabBarHidden else {return}
                         withAnimation(.easeInOut(duration: 0.2)) {
                             let screenCutoff = frameWidth / 2 * 0.8
                             let trans = abs(value.translation.width)
@@ -133,7 +133,7 @@ struct UserCardView: View {
             }
             Spacer()
             Button(action: {
-                appState.isFullScreen = true
+                appState.isTabBarHidden = true
             }, label: {
                 Image(systemName: "info.circle.fill")
                     .font(.system(size: 30))
@@ -146,7 +146,7 @@ struct UserCardView: View {
         .background(
             LinearGradient(colors: [.black.opacity(0.9),.clear], startPoint: .bottom, endPoint: .top)
         )
-        .cornerRadius(appState.isFullScreen ? 0 : 20)
+        .cornerRadius(appState.isTabBarHidden ? 0 : 20)
         .clipped()
     }
     

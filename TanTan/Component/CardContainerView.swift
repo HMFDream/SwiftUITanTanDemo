@@ -13,7 +13,7 @@ struct CardContainerView: View {
     var viewModel:HomeViewModel
     var card:UserCard
     var body: some View {
-        if appState.isFullScreen {
+        if appState.isTabBarHidden {
             CardDetailView(namespace: namespace, card: card)
                 .background(.white)
                 .environment(appState)

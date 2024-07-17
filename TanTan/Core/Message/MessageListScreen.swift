@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MessageListScreen: View {
-    
+    @Environment(AppState.self) var appState 
     var vm = MessageListViewModel()
     @State var searchText:String = ""
     @State var isEditing:Bool = false
@@ -42,6 +42,7 @@ struct MessageListScreen: View {
                             withAnimation(.easeIn(duration: 0.25)) {
                                 isEditing = true
                             }
+                            appState.isTabBarHidden = true
                         }
                     
                     if isEditing {
@@ -49,6 +50,7 @@ struct MessageListScreen: View {
                             withAnimation(.easeIn(duration: 0.25)) {
                                 isEditing = false
                             }
+                            appState.isTabBarHidden = false
                             searchText = ""
                             endEditing(true)
                         }, label: {
@@ -72,7 +74,7 @@ struct MessageListScreen: View {
                             Spacer()
                         }
                         .buttonStyle(PlainButtonStyle())
-                        .animation(.easeIn(duration: 0.25))
+                        .animation(.easeIn(duration: 0.25), value: vm.messagePreviews.count)
                         .transition(.slide)
                         
 
@@ -100,5 +102,5 @@ struct MessageListScreen: View {
 }
 
 #Preview {
-    MessageListScreen()
+    MessageListScreen().environment(AppState())
 }

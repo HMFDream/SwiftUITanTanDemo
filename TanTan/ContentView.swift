@@ -21,12 +21,13 @@ struct ContentView: View {
             case .live:
                 Text("home")
             case .message:
-                ChatView(user: User.Others)
+                MessageListScreen()
+                    .environment(appState)
             case .profile:
                 Text("home")
             }
             
-            if !appState.isTabHidden {
+            if !appState.isTabBarHidden {
                 Spacer()
                 HStack {
                     createTabItem(tanItem: .home, title: "home")

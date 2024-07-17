@@ -14,5 +14,5 @@ struct MessageScreen: View {
 }
 
 #Preview {
-    MessageScreen()
+    MessageScreen().environment(AppState())
 }
