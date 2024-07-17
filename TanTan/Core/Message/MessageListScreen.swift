@@ -39,12 +39,16 @@ struct MessageListScreen: View {
                         }
                         .padding(.horizontal, 15)
                         .onTapGesture {
-                            isEditing = true
+                            withAnimation(.easeIn(duration: 0.25)) {
+                                isEditing = true
+                            }
                         }
                     
                     if isEditing {
                         Button(action: {
-                            isEditing = false
+                            withAnimation(.easeIn(duration: 0.25)) {
+                                isEditing = false
+                            }
                             searchText = ""
                             endEditing(true)
                         }, label: {
@@ -54,13 +58,45 @@ struct MessageListScreen: View {
                         .transition(.move(edge: .trailing))
                     }
                 }
-                Text("Content")
+                
+                VStack {
+                    ForEach(vm.messagePreviews.filter {
+                        searchText.isEmpty ? true : displayPreview($0)
+                    }, id: \.self) { preview in
+                        NavigationLink {
+                            ChatView(user: preview.user)
+                        } label: {
+                            MessageListRowView(messagePreview: preview)
+                                .padding(.horizontal, 20)
+                                .padding(.vertical, 5)
+                            Spacer()
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .animation(.easeIn(duration: 0.25))
+                        .transition(.slide)
+                        
+
+                    }
+                }
                 Spacer()
             }
             .navigationTitle("")
-            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
         }
     }
+    
+    func displayPreview(_ preview:MessagePreview) -> Bool {
+        if preview.user.name.contains(searchText) {
+            return true
+        }
+        
+        if preview.lastMessage.contains(searchText) {
+            return true
+        }
+        
+        return false
+    }
+    
 }
 
 #Preview {

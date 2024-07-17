@@ -7,9 +7,14 @@
 
 import Foundation
 
-struct MessagePreview {
+struct MessagePreview: Hashable {
     var user:User
     var lastMessage:String
+    
+    static func == (lhs: MessagePreview, rhs: MessagePreview) -> Bool {
+        lhs.user.name == rhs.user.name  && lhs.lastMessage == rhs.lastMessage
+    }
+    
 }
 
 extension MessagePreview {

@@ -10,6 +10,7 @@
 		92165A342C46C0380004ABAE /* MessageListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92165A332C46C0380004ABAE /* MessageListScreen.swift */; };
 		92165A362C4766FB0004ABAE /* MessageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92165A352C4766FB0004ABAE /* MessageListViewModel.swift */; };
 		92165A382C4767910004ABAE /* MessagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92165A372C4767910004ABAE /* MessagePreview.swift */; };
+		92165A3A2C476C3A0004ABAE /* MessageListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92165A392C476C3A0004ABAE /* MessageListRowView.swift */; };
 		929197422C4519D6006F7A70 /* PickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197412C4519D6006F7A70 /* PickView.swift */; };
 		929197442C469EDF006F7A70 /* PickListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197432C469EDF006F7A70 /* PickListView.swift */; };
 		929197462C46A2CC006F7A70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197452C46A2CC006F7A70 /* User.swift */; };
@@ -40,6 +41,7 @@
 		92165A332C46C0380004ABAE /* MessageListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListScreen.swift; sourceTree = "<group>"; };
 		92165A352C4766FB0004ABAE /* MessageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewModel.swift; sourceTree = "<group>"; };
 		92165A372C4767910004ABAE /* MessagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreview.swift; sourceTree = "<group>"; };
+		92165A392C476C3A0004ABAE /* MessageListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListRowView.swift; sourceTree = "<group>"; };
 		929197412C4519D6006F7A70 /* PickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickView.swift; sourceTree = "<group>"; };
 		929197432C469EDF006F7A70 /* PickListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickListView.swift; sourceTree = "<group>"; };
 		929197452C46A2CC006F7A70 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				9291974D2C46A4E0006F7A70 /* MessageView.swift */,
 				9291974F2C46A5D0006F7A70 /* ChatView.swift */,
 				929197532C46B030006F7A70 /* ChatViewHeader.swift */,
+				92165A392C476C3A0004ABAE /* MessageListRowView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				92A40DC02C3BE98E00C28116 /* HomeScreen.swift in Sources */,
 				929197522C46A5E1006F7A70 /* ChatManager.swift in Sources */,
 				92C06B4A2C3AB9A300CEE4FC /* ContentView.swift in Sources */,
+				92165A3A2C476C3A0004ABAE /* MessageListRowView.swift in Sources */,
 				929197482C46A307006F7A70 /* Message.swift in Sources */,
 				92C06B582C3AC2EB00CEE4FC /* UserCard.swift in Sources */,
 				929197562C46B050006F7A70 /* CircleAvator.swift in Sources */,
