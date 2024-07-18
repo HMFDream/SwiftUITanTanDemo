@@ -68,7 +68,11 @@ struct ProfileScreen: View {
             .background(.accent.opacity(0.5))
             .cornerRadius(12)
             
-            Spacer()
+            ZStack {
+                Color.gray.opacity(0.2)
+                SwipeCard()
+            }
+            .padding(.top, 20)
             
         })
     }

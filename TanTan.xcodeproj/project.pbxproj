@@ -13,6 +13,7 @@
 		92165A3A2C476C3A0004ABAE /* MessageListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92165A392C476C3A0004ABAE /* MessageListRowView.swift */; };
 		92165A3D2C47A80E0004ABAE /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92165A3C2C47A80E0004ABAE /* ProfileScreen.swift */; };
 		92165A3F2C47A81F0004ABAE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92165A3E2C47A81F0004ABAE /* ProfileViewModel.swift */; };
+		92165A422C48D8AB0004ABAE /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92165A412C48D8AB0004ABAE /* SwipeCard.swift */; };
 		929197422C4519D6006F7A70 /* PickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197412C4519D6006F7A70 /* PickView.swift */; };
 		929197442C469EDF006F7A70 /* PickListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197432C469EDF006F7A70 /* PickListView.swift */; };
 		929197462C46A2CC006F7A70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929197452C46A2CC006F7A70 /* User.swift */; };
@@ -46,6 +47,7 @@
 		92165A392C476C3A0004ABAE /* MessageListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListRowView.swift; sourceTree = "<group>"; };
 		92165A3C2C47A80E0004ABAE /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		92165A3E2C47A81F0004ABAE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		92165A412C48D8AB0004ABAE /* SwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCard.swift; sourceTree = "<group>"; };
 		929197412C4519D6006F7A70 /* PickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickView.swift; sourceTree = "<group>"; };
 		929197432C469EDF006F7A70 /* PickListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickListView.swift; sourceTree = "<group>"; };
 		929197452C46A2CC006F7A70 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -87,10 +89,19 @@
 		92165A3B2C47A8030004ABAE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				92165A402C48D8940004ABAE /* Component */,
 				92165A3C2C47A80E0004ABAE /* ProfileScreen.swift */,
 				92165A3E2C47A81F0004ABAE /* ProfileViewModel.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		92165A402C48D8940004ABAE /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				92165A412C48D8AB0004ABAE /* SwipeCard.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		929197492C46A4BF006F7A70 /* Message */ = {
@@ -294,6 +305,7 @@
 				929197422C4519D6006F7A70 /* PickView.swift in Sources */,
 				92C06B6A2C3BE14D00CEE4FC /* CardContainerView.swift in Sources */,
 				92165A3F2C47A81F0004ABAE /* ProfileViewModel.swift in Sources */,
+				92165A422C48D8AB0004ABAE /* SwipeCard.swift in Sources */,
 				92165A382C4767910004ABAE /* MessagePreview.swift in Sources */,
 				92165A342C46C0380004ABAE /* MessageListScreen.swift in Sources */,
 				92A40DC32C3BEAD000C28116 /* CardDetailView.swift in Sources */,
