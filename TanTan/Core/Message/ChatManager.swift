@@ -39,6 +39,4 @@ import UIKit
         .subscribe(on: DispatchQueue.main)
         .assign(to: \.keyboardIsShowing, on: self)
     }
-    
-    
 }
